@@ -17,6 +17,7 @@
 body {
   margin: 0;
   font-family: "PT Sans", sans-serif;
+  font-style: normal;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
@@ -102,3 +103,103 @@ li {
   text-decoration: none;
   font-style: normal;
 }
+
+.sorting-wrapper {
+  background-image: url("/images/catalog-background 1.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.control-label {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.amount-found {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 39px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.hostel-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hostel-card-title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 31px;
+}
+
+.hostel-card-value,
+.hostel-card-price,
+.number-of-hotels {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.hostel-rating {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.pagination-show-more {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  background: #83B3D3;
+}
+
+.pagination-item {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.pagination-link {
+  color: #FFFFFF;
+  background: #83B3D3;
+}
+
+.pagination-current {
+  color: #242424;
+  background-color: #FFFFFF;
+}
+
+
+

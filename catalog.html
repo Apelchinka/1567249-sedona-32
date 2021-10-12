@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Каталог</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 <header class="page-header">
@@ -15,11 +16,11 @@
         <a class="navigation-link" href="#">О Седоне</a>
       </li>
       <li class="navigation-item">
-        <a class="navigation-link">Гостиницы</a>
+        <a class="navigation-link" href="catalog.html">Гостиницы</a>
       </li>
     </ul>
 
-    <img src="" alt="Логотип Sedona" class="logo-sedona">
+    <img class="logo-sedona" src="images/sedona.svg" alt="Логотип Sedona" width="138" height="70"/>
 
     <ul class="navigation-list navigation-user">
       <li class="navigation-item">
@@ -39,6 +40,7 @@
   </nav>
 </header>
 <main class="main-inner">
+  <div class="sorting-wrapper">
   <header class="inner-header">
     <h1 class="inner-header-title">Гостиницы Седоны</h1>
     <ul class="breadcrumbs">
@@ -169,10 +171,10 @@
       <button class="button" type="reset">Сбросить</button>
     </form>
   </section>
-
+</div>
   <section class="location-of-cards">
     <h2 class="visually-hidden">Выберите расположение карточек</h2>
-    <h3>Найдено гостиниц:</h3>
+    <h3 class="amount-found">Найдено гостиниц:</h3>
     <form class="sorting-type">
       <label class="visually-hidden" for="sorting">Сортировка</label>
       <select class="select-control" id="sorting" name="sorting">
@@ -201,50 +203,50 @@
     </h2>
     <div class="hostel-card">
       <a class="hostel-card-link" href="#">
-        <img class="hostel-card-image" src="" alt="Amara Resort & Spa"/>
+        <img class="hostel-card-image" src="images/hotel-1.jpg" width="180" height="120" alt="Amara Resort & Spa"/>
         <h3 class="hostel-card-title">Amara Resort & Spa</h3>
       </a>
-      <b class="hostel-card-value">Гостница</b>
+      <b class="hostel-card-value">Гостиница</b>
       <b class="hostel-card-price"> от 4000 ₽</b>
       <a class="hostel-card-button button" href="#">Подробнее</a>
       <a class="hostel-card-button button" href="#">В избранное</a>
-      <img class="hostel-star" src="" alt="Четыре звезды"/>
+      <img class="hostel-star" src="images/stars-4.svg" alt="Четыре звезды"/>
       <p class="hostel-rating">Рейтинг: 8,5</p>
     </div>
     <div class="hostel-card">
       <a class="hostel-card-link" href="#">
-        <img class="hostel-card-image" src="" alt="Desert Quail Inn"/>
+        <img class="hostel-card-image" src="images/hotel-2.jpg" width="180" height="120" alt="Desert Quail Inn">
         <h3 class="hostel-card-title">Desert Quail Inn</h3>
       </a>
       <b class="hostel-card-value">Мотель</b>
       <b class="hostel-card-price"> от 3000 ₽</b>
       <a class="hostel-card-button button" href="#">Подробнее</a>
       <a class="hostel-card-button button" href="#">В избранное</a>
-      <img class="hostel-star" src="" alt="Три звезды"/>
+      <img class="hostel-star" src="images/stars-3.svg" alt="Три звезды"/>
       <p class="hostel-rating">Рейтинг: 8,9</p>
     </div>
     <div class="hostel-card">
       <a class="hostel-card-link" href="#">
-        <img class="hostel-card-image" src="" alt="Villas at Poco Diablo"/>
+        <img class="hostel-card-image" src="images/hotel-3.jpg" width="180" height="120" alt="Villas at Poco Diablo">
         <h3 class="hostel-card-title">Villas at Poco Diablo</h3>
       </a>
       <b class="hostel-card-value">Апартаменты</b>
       <b class="hostel-card-price"> от 2000 ₽</b>
       <a class="hostel-card-button button" href="#">Подробнее</a>
       <a class="hostel-card-button button" href="#">В избранное</a>
-      <img class="hostel-star" src="" alt="Две звезды"/>
+      <img class="hostel-star" src="images/stars-2.svg" alt="Две звезды"/>
       <p class="hostel-rating">Рейтинг: 9,2</p>
     </div>
     <div class="hostel-card">
       <a class="hostel-card-link" href="#">
-        <img class="hostel-card-image" src="" alt="GreenTree Inn"/>
+        <img class="hostel-card-image" src="images/hotel-4.jpg" width="180" height="120" alt="GreenTree Inn">
         <h3 class="hostel-card-title">GreenTree Inn</h3>
       </a>
       <b class="hostel-card-value">Гостница</b>
       <b class="hostel-card-price"> от 3000 ₽</b>
       <a class="hostel-card-button button" href="#">Подробнее</a>
       <a class="hostel-card-button button" href="#">В избранное</a>
-      <img class="hostel-star" src="" alt="Две звезды"/>
+      <img class="hostel-star" src="images/stars-2.svg" alt="Две звезды">
       <p class="hostel-rating">Рейтинг: 9,2</p>
     </div>
   </section>
@@ -273,7 +275,7 @@
       </li>
     </ul>
     <form class="sorting-type">
-      <label for="sorting">Гостиниц на странице:</label>
+      <label class="number-of-hotels " for="sorting">Гостиниц на странице:</label>
       <select
         class="select-control"
         id="sorting-hotel"
@@ -286,10 +288,10 @@
     </form>
   </section>
 
-  <section class="newsletter">
+  <section class="newsletter-catalog">
     <h2 class="visually-hidden">Рассылка новостей</h2>
-    <p>Подпишитесь на рассылку</p>
-    <p>
+    <p class="section-title">Подпишитесь на рассылку</p>
+    <p class="section-text">
       Только полезная информация и никакого спама, честное бойскаутское!
     </p>
     <form
@@ -297,7 +299,7 @@
       action="https://echo.htmlacademy.ru/"
       method="post"
     >
-      <input type="email" name="newsletter-date" placeholder="Ваш e-mail">
+      <input type="email" name="newsletter-date" placeholder="Ваш e-mail"/>
       <button class="button" type="submit">Подписаться</button>
     </form>
   </section>
@@ -337,6 +339,7 @@
   <section class="footer-html-academy">
     <h2 class="visually-hidden">Главная страница сайта разработчика</h2>
     <a class="link-html-academy" href="https://htmlacademy.ru/">
+      <img src="/images/logo_htmlacademy.svg" width="115" height="34">
     </a>
   </section>
 </footer>
