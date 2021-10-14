@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -100,7 +100,7 @@ li {
 /*welcome*/
 
 .logo-welcome-wrap {
-  background: url("/images/divider.svg") bottom no-repeat, url("/images/index-background.jpg") no-repeat;
+  background: url("../images/divider.svg") bottom no-repeat, url("../images/index-background.jpg") no-repeat;
   background-size: 100% auto;
   text-align: center;
 }
@@ -180,7 +180,7 @@ li {
 /*newsletter*/
 
 .newsletter {
-  background-image: url("/images/background-newsletter.jpg");
+  background-image: url("../images/background-newsletter.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #FFFFFF;
@@ -228,7 +228,7 @@ li {
 /*catalog*/
 
 .sorting-wrapper {
-  background-image: url("/images/catalog-background 1.jpg");
+  background-image: url("../images/catalog-background 1.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #FFFFFF;
