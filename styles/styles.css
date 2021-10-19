@@ -31,10 +31,17 @@ html {
   height: 100%;
 }
 
-li {
-  list-style: none;
-}
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /*header*/
 .navigation {
@@ -45,9 +52,12 @@ li {
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   width: calc(100% / 2 - 138px);
+  list-style-type: none;
 }
 
 .logo-sedona {
@@ -56,10 +66,18 @@ li {
 }
 
 .navigation-user {
+  justify-content: flex-end;
   width: calc(100% / 2 - 138px);
 }
 
+.navigation-user .navigation-link {
+  min-width: 20px;
+  min-height: 20px;
+}
+
 .navigation-link {
+  display: block;
+  padding: 19px 17px 20px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -80,22 +98,6 @@ li {
   margin: 0 auto;
 }
 
-
-.section-title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.section-text {
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: center;
-}
-
 /**/
 
 /*welcome*/
@@ -106,9 +108,33 @@ li {
   text-align: center;
 }
 
+.logo-welcome {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
 .sedona-text {
   width: 720px;
   margin: 0 auto;
+  padding-top: 63px;
+  padding-bottom: 79px;
+}
+
+.section-title {
+  margin: 0 0 23px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-text {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
 }
 
 /**/
@@ -120,6 +146,7 @@ li {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .advices-list {
@@ -127,6 +154,7 @@ li {
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .advice-item,
@@ -160,6 +188,7 @@ li {
   font-weight: 700;
   line-height: 28px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .advantages-description,
@@ -170,15 +199,75 @@ li {
   text-align: center;
 }
 
+.advantages-description, .advice-description {
+  margin: 0;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.advantages-item:nth-child(1) .advantages-description,
+.advantages-item:nth-child(3) .advantages-description{
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.advantages-title {
+  margin-top: 98px;
+  margin-bottom: 0;
+}
+
+.advantages-item:nth-last-child(-n+3) .advantages-description{
+  margin-bottom: 80px;
+}
+
+.advantages-number {
+  margin: 25px 0px 26px;
+}
+
+.advice-icon-home {
+  margin-top: 89px;
+}
+
+.advice-icon-food {
+  margin-top: 91px;
+}
+
+.advice-icon-souvenirs {
+  margin-top: 85px;
+}
+
+.advice-title {
+  margin-top: 23px;
+  margin-bottom: 20px;
+}
+
+.advice-description {
+  margin-bottom: 79px ;
+}
+
 /**/
 
 /*hotel search*/
 
 .hotel-search-wrapper {
   width: 720px;
-  margin: 0 auto;
+  margin: 91px auto;
 }
 
+.hotel-search-title {
+  margin-bottom: 15px;
+}
+.hotel-search-text {
+  margin-bottom: 59px;
+  line-height: 26px;
+}
+
+.search-link {
+  display: block;
+  width: 575px;
+  margin: 0 auto;
+  text-align: center;
+}
 /**/
 
 /*newsletter*/
@@ -193,8 +282,22 @@ li {
 .newsletter-wrapper {
   width: 800px;
   margin: 0 auto;
+  padding: 94px 0 93px;
 }
 
+.newsletter-title {
+  margin-bottom: 15px;
+}
+
+.newsletter-text {
+  line-height: 26px;
+  margin-bottom: 50px;
+}
+
+.newsletter-form {
+  width: 100%;
+  margin: 0 auto;
+}
 /**/
 
 /*footer*/
@@ -204,6 +307,26 @@ li {
   justify-content: space-between;
   width: 1060px;
   margin: 0 auto;
+  padding: 40px 0 30px;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-social-item {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .footer-social {
@@ -220,6 +343,7 @@ li {
 
 
 .address-phone {
+  display: block;
   font-size: 40px;
   font-weight: 400;
   line-height: 40px;
@@ -383,6 +507,7 @@ li {
   line-height: 21px;
   text-transform: uppercase;
 }
+
 .button-show-more {
   color: #FFFFFF;
   font-size: 20px;
@@ -406,6 +531,7 @@ li {
   padding: 0;
   width: 370px;
 }
+
 .pagination-item {
   font-size: 20px;
   font-style: normal;
@@ -428,6 +554,7 @@ li {
 .number-of-hotels-form {
   width: 386px;
 }
+
 /**/
 
 
