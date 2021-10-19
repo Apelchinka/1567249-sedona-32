@@ -191,7 +191,7 @@
         <h2 class="visually-hidden" hidden>Выберите расположение карточек</h2>
         <h3 class="amount-found">Найдено гостиниц:</h3>
         <div class="location-of-cards-wrapper">
-          <form class="sorting-type sort-by-price">
+          <form class="sorting-type sort-by-value">
             <label class="visually-hidden" for="sorting">Сортировка</label>
             <select class="select-control" id="sorting" name="sorting">
               <option value="popular">Сначала популярные</option>
@@ -204,13 +204,13 @@
           </form>
 
           <div class="location-of-cards-button">
-            <a class="button" href="#">
+            <a class="button-location" href="#">
               <span class="visually-hidden">Показать сетку</span>
             </a>
-            <a class="button" href="#">
+            <a class="button-location" href="#">
               <span class="visually-hidden">Показать слайдер</span>
             </a>
-            <a href="#" class="button button-light">
+            <a class="button-location" href="#">
               <span class="visually-hidden">Показать список</span>
             </a>
           </div>
@@ -278,49 +278,49 @@
       <section class="pagination">
         <h2 class="visually-hidden" hidden>Нумерация страниц</h2>
 
-          <ul class="pagination-list">
-            <li class="pagination-item">
-              <a class="pagination-current selected-page">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">...</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link">10</a>
-            </li>
-          </ul>
-          <form class="sorting-type number-of-hotels-form">
-            <label class="number-of-hotels " for="sorting">Гостиниц на странице:</label>
-            <select
-              class="select-control"
-              id="sorting-hotel"
-              name="sorting-hotel"
-            >
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </form>
+        <ul class="pagination-list">
+          <li class="pagination-current pagination-item">
+            <a class="pagination-link pagination-current-link selected-page">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">...</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">10</a>
+          </li>
+        </ul>
+        <form class="sorting-type number-of-hotels-form">
+          <label class="number-of-hotels " for="sorting">Гостиниц на странице:</label>
+          <select
+            class="select-control"
+            id="sorting-hotel"
+            name="sorting-hotel"
+          >
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </form>
 
 
       </section>
     </div>
 
-    <section class="newsletter-catalog">
+    <section class="newsletter">
       <h2 class="visually-hidden">Рассылка новостей</h2>
       <div class="newsletter-wrapper">
-        <p class="section-title">Подпишитесь на рассылку</p>
-        <p class="section-text">
-          Только полезная информация и никакого спама, честное бойскаутское!
+        <p class="section-title newsletter-title">Подпишитесь на рассылку</p>
+        <p class="section-text newsletter-text">
+          Только полезная информация и никакого спама,<br> честное бойскаутское!
         </p>
         <form
           class="newsletter-form"
