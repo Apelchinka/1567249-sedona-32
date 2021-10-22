@@ -221,7 +221,7 @@ html {
 }
 
 .advantages-number {
-  margin: 25px 0px 26px;
+  margin: 25px 0 26px;
 }
 
 .advice-icon-home {
@@ -297,8 +297,35 @@ html {
 }
 
 .newsletter-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
   width: 100%;
+  box-sizing: border-box;
   margin: 0 auto;
+}
+
+.newsletter-form input {
+  padding: 0 22px 0 19px;
+  border: 0;
+  border-radius: 10px 0 0 10px;
+  background-color: #F2F2F2;
+}
+
+.newsletter-index .newsletter-form input {
+  background-color: #FFFFFF;
+}
+
+.newsletter-form button {
+  height: 60px;
+  width: 200px;
+  color: #FFFFFF;
+  font-family: PT Sans;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #83B3D3;
+  border: 0;
+  border-radius: 0 10px 10px 0;
 }
 
 /**/
@@ -393,6 +420,7 @@ html {
 
 .sorting-wrapper {
   width: 1200px;
+  margin-bottom: 44px;
   background-image: url("../images/catalog-background_1.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -467,7 +495,7 @@ html {
 .location-of-cards {
   display: flex;
   flex-wrap: wrap;
-  margin: 44px auto 42px;
+  margin-bottom: 42px;
 }
 
 .location-of-cards-wrapper {
@@ -504,20 +532,113 @@ html {
 /**/
 
 .catalog-products {
-  width: 1060px;
+  width: 1056px;
   margin: 0 auto;
 }
 
+.catalog {
+  margin-bottom: 31px;
+}
 
 /**/
 
+/*cards table*/
 
-.hostel-card-link {
+.cards-table {
+  display: grid;
+  grid-template: repeat(4, auto) /1fr;
+}
+
+.card-table {
+  display: grid;
+  grid-template-rows: 31px min-content 37px;
+  grid-template-columns: auto auto auto 1fr auto;
+  padding: 30px 0;
+  border-top: solid 1px #E5E5E5;
+}
+
+.card-table .hostel-card-image-link {
+  margin-right: 36px;
+}
+
+.card-table .more-details-button {
+  margin-right: 8px;
+}
+
+.card-table .hostel-card-image-link {
+  grid-row: 1 / -1;
+}
+
+.card-table .hostel-card-title-link {
+  grid-row: 1;
+  grid-column: 2 / 5;
+}
+
+.card-table .hostel-card-value,
+.card-table .hostel-card-price {
+  grid-row: 2;
+}
+
+.card-table .more-details-button,
+.card-table .favorites-button,
+.card-table .hostel-rating {
+  grid-row: 3;
+}
+
+.card-table .star-wrapper,
+.card-table .hostel-rating {
+  grid-column: 5;
+}
+
+/**/
+
+/*hostel cards*/
+
+.hostel-card-title-link, .hostel-card-image-link, .more-details-button, .favorites-button {
   text-decoration: none;
   color: inherit;
 }
 
+.hostel-card-image, .hostel-star, .more-details-button, .favorites-button {
+  display: block;
+}
+
+.more-details-button, .favorites-button, .hostel-rating {
+  margin: 0;
+  padding: 7px 0;
+  border-radius: 4px;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 23px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.more-details-button, .favorites-button {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.more-details-button {
+  width: 151px;
+  background-color: #756257;
+}
+
+.favorites-button {
+  background-color: #7DB54F;
+
+}
+
+.hostel-rating {
+  background-color: #F2F2F2;
+}
+
+.favorites-button, .hostel-rating {
+  width: 160px
+}
+
 .hostel-card-title {
+  margin: 0;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -527,42 +648,56 @@ html {
 .hostel-card-value,
 .hostel-card-price,
 .number-of-hotels {
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 23px;
+  text-align: left;
 }
 
+.star-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .hostel-rating {
-  font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 21px;
-  text-transform: uppercase;
+}
+
+/*button show more*/
+
+.button-wrapper {
+  height: 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: solid 1px #E5E5E5;
+  border-bottom: solid 1px #E5E5E5;
 }
 
 .button-show-more {
   display: block;
   width: 625px;
   height: 55px;
-  margin: 31px auto 30px;
   color: #FFFFFF;
   background: #83B3D3;
   border-width: 0;
   border-radius: 4px;
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
   line-height: 26px;
-  text-align: center;
   text-transform: uppercase;
 }
+
+/**/
 
 /*pagination*/
 
 .pagination {
   display: flex;
   justify-content: space-between;
-  margin-top: 31px;
 }
 
 .pagination-list {
