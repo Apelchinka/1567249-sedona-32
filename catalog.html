@@ -67,12 +67,6 @@
                 <span class="visually-hidden">Главная</span></a
               >
             </li>
-            <svg class="arrow" width="12" height="12" viewBox="0 0 20 20" aria-hidden="true"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M4.21967 7.34467C4.51256 7.05178 4.98744 7.05178 5.28033 7.34467L10 12.0643L14.7197 7.34467C15.0126 7.05178 15.4874 7.05178 15.7803 7.34467C16.0732 7.63756 16.0732 8.11244 15.7803 8.40533L10.5303 13.6553C10.2374 13.9482 9.76256 13.9482 9.46967 13.6553L4.21967 8.40533C3.92678 8.11244 3.92678 7.63756 4.21967 7.34467Z"
-              />
-            </svg>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="#">Гостиницы</a>
             </li>
@@ -211,7 +205,7 @@
     <div class="catalog-products">
       <section class="location-of-cards">
         <h2 class="visually-hidden" hidden>Выберите расположение карточек</h2>
-        <h3 class="amount-found">Найдено гостиниц:</h3>
+        <h3 class="amount-found">Найдено гостиниц: 38</h3>
         <div class="location-of-cards-wrapper">
           <form class="sorting-type sort-by-value">
             <label class="visually-hidden" for="sorting">Сортировка</label>
@@ -348,7 +342,7 @@
         </ul>
 
         <form class="sorting-type number-of-hotels-form">
-          <label class="number-of-hotels" for="sorting">Гостиниц на странице:</label>
+          <label class="number-of-hotels" for="sorting-hotel">Гостиниц на странице:</label>
           <svg class="arrow-select-num-hotels" width="20" height="20" viewBox="0 0 20 20"
                xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -359,9 +353,9 @@
             id="sorting-hotel"
             name="sorting-hotel"
           >
-            <option value="2">2</option>
-            <option value="3">3</option>
             <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
           </select>
         </form>
 
@@ -381,7 +375,7 @@
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-          <input type="email" name="newsletter-date" placeholder="Ваш e-mail"/>
+          <input class="input-newsletter" type="email" name="newsletter-date" placeholder="Ваш e-mail"/>
           <button class="light-button" type="submit">Подписаться</button>
         </form>
       </div>
