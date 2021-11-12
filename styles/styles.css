@@ -27,6 +27,12 @@ body {
   background-color: #FFFFFF;
 }
 
+button {
+  font-family: "PT Sans", sans-serif;
+  border: 0;
+  text-transform: uppercase;
+}
+
 html {
   height: 100%;
 }
@@ -68,6 +74,10 @@ html {
   width: calc(100% / 2 - 138px);
   list-style-type: none;
   align-items: center;
+}
+
+.navigation-item {
+  position: relative;
 }
 
 .navigation-item:not(:last-child) {
@@ -124,8 +134,6 @@ html {
 .nav-search-link {
   box-sizing: border-box;
   width: 160px;
-  background-color: #756257;
-  color: #ffffff;
   border-radius: 10px;
   font-size: 16px;
   line-height: 20px;
@@ -141,6 +149,368 @@ html {
   left: 0;
   margin: auto;
 }
+
+/**/
+
+/*popover*/
+
+.popover {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  min-height: 200px;
+  position: absolute;
+  top: 43px;
+  right: -180px;
+  z-index: 1;
+}
+
+.popover-opened {
+  display: flex;
+}
+
+.favorites-list-container {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-bottom: 0;
+  border-radius: 20px 20px 0 0;
+}
+
+.favorites-list-container::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 190px;
+  box-sizing: border-box;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #E5E5E5;
+  border-left: 10px solid transparent;
+  width: 20px;
+  height: 9px;
+}
+
+.favorites-list-container::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 190px;
+  box-sizing: border-box;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FFFFFF;
+  border-left: 10px solid transparent;
+  width: 20px;
+  height: 9px;
+}
+
+.favorites-list {
+  margin: 0;
+  padding: 15px;
+  list-style-type: none
+}
+
+.favorites-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.favorites-list-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.favorite-hostel-link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.favorite-hostel-image {
+  border-radius: 50%;
+  margin-right: 17px;
+}
+
+.favorite-hostel-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+}
+
+.favorite-hostel-value {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.button-delete {
+  position: relative;
+  box-sizing: content-box;
+  min-height: 20px;
+  min-width: 20px;
+  padding: 8px;
+  margin-top: 7px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.button-delete svg {
+  fill: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.button-all-favourites {
+  font-weight: 700;
+  font-size: 16px;
+  height: 60px;
+  border-radius: 0 0 20px 20px;
+}
+
+/**/
+
+/*modal window*/
+
+.modal-container {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 62px 70px 70px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+}
+
+.modal-booking {
+  width: 575px;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 70px;
+  top: 54px;
+  box-sizing: content-box;
+  min-width: 13px;
+  min-height: 13px;
+  padding: 20px;
+  background-color: rgba(242, 242, 242, 1);
+  border-radius: 50%;
+  cursor: pointer;
+  tab-index: 1;
+}
+
+.modal-close-button svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.modal-title {
+  margin: 0 0 59px;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000000;
+  text-transform: uppercase;
+  font-style: normal;
+  text-align: left;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.booking-form label:not(.label-kids, .label-adults) {
+  margin-bottom: 40px;
+}
+
+.input-arrival, .input-departure {
+  background-image: url("../images/date.svg");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: center right 19px;
+}
+
+.booking-form label {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-arrival::after {
+  position: absolute;
+  top: 100%;
+  left: 155px;
+  color: #ff5757;
+  content: "Мы не можем отправить вас в прошлое.";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+.booking-departure::after {
+  position: absolute;
+  top: 100%;
+  left: 155px;
+  color: #333333;
+  content: "На эти даты есть свободные номера. Пока есть.";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+.number-of-persons {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.label-adults {
+  width: 288px;
+}
+
+.label-kids {
+  width: 230px;
+}
+
+.label-adults, .label-kids {
+  position: relative;
+}
+
+.sign {
+  box-sizing: content-box;
+  position: absolute;
+  top: 12px;
+  min-width: 13px;
+  min-height: 13px;
+  padding: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sign svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  opacity: 30%;
+}
+
+.minus {
+  right: 95px;
+}
+
+.plus {
+  right: 12px;
+}
+
+.modal-field, .modal-range-input {
+  box-sizing: border-box;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(242, 242, 242, 1);
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.input-arrival, .input-departure {
+  padding: 0 19px;
+  width: 420px;
+}
+
+.adults-quantity, .kids-quantity {
+  text-align: center;
+  width: 133px;
+  cursor: default;
+}
+
+.button-submit-booking {
+  margin-top: 40px;
+  padding: 0;
+  height: 60px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.modal-info {
+  position: relative;
+  box-sizing: content-box;
+  padding: 8px 12px;
+  min-height: 9px;
+  min-width: 1px;
+  border-radius: 50%;
+  background-color: #83B3D3;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.modal-info svg{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #FFFFFF;
+}
+
+.info-text {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: -116px;
+  width: 216px;
+  padding: 15px 18px 18px 22px;
+  background-color: rgba(51, 51, 51, 1);
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: left;
+  text-transform: none;
+}
+
+.info-text::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 118px;
+  box-sizing: border-box;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(51, 51, 51, 1);
+  border-left: 10px solid transparent;
+  width: 19px;
+  height: 9px;
+}
+
+/**/
 
 /*page*/
 
@@ -319,8 +689,6 @@ html {
   margin: 0 auto;
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: #756257;
-  color: #ffffff;
   border-radius: 10px;
   font-size: 20px;
   font-weight: 700;
@@ -387,13 +755,8 @@ html {
 .newsletter-form button {
   height: 60px;
   width: 200px;
-  color: #FFFFFF;
-  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  text-transform: uppercase;
-  background-color: #83B3D3;
-  border: 0;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
 }
@@ -675,7 +1038,6 @@ html {
   width: 20px;
   height: 20px;
   background: #FFFFFF;
-  border: 0;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -794,12 +1156,7 @@ html {
   height: 48px;
   margin-bottom: 15px;
   box-sizing: border-box;
-  background-color: #83B3D3;
-  border: 0;
   border-radius: 4px;
-  color: inherit;
-  text-transform: uppercase;
-  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -811,10 +1168,9 @@ html {
   height: 32px;
   box-sizing: border-box;
   background: transparent;
-  border: 0;
   color: inherit;
-  font-family: "PT Sans", sans-serif;
   font-size: 18px;
+  text-transform: none;
   line-height: 23px;
   text-align: center;
   cursor: pointer;
@@ -833,7 +1189,6 @@ html {
 
 .location-of-cards {
   display: flex;
-  flex-wrap: wrap;
   margin-bottom: 42px;
 }
 
@@ -1001,8 +1356,8 @@ html {
   font-size: 16px;
   font-style: normal;
   line-height: 23px;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .more-details-button, .favorites-button {
@@ -1012,13 +1367,8 @@ html {
 
 .more-details-button {
   width: 151px;
-  background-color: #756257;
 }
 
-.favorites-button {
-  background-color: #83B3D3;
-
-}
 
 .current-favorites-button {
   background-color: #7DB54F;
@@ -1095,7 +1445,6 @@ html {
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
-  text-transform: uppercase;
 }
 
 /**/
@@ -1132,8 +1481,6 @@ html {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  color: #FFFFFF;
-  background-color: #83B3D3;
   border-radius: 4px;
   text-decoration: none;
   cursor: pointer;
@@ -1173,22 +1520,32 @@ html {
 
 /**/
 
+/*button*/
+
+.dark-button {
+  background-color: rgba(117, 98, 87, 1);
+  color: #FFFFFF;
+}
+
+.light-button {
+  background-color: #83B3D3;
+  color: #FFFFFF;
+}
+
+/**/
+
 /*condition of links and buttons*/
 
-.control:hover .control-input[type="checkbox"] + .control-mark {
+.control:hover .control-input[type="checkbox"] + .control-mark, .control-input[type="checkbox"]:focus-visible + .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
-}
-
-.control-input[type="checkbox"]:focus-visible + .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.control:active .control-input[type="checkbox"] + .control-mark {
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .control-input:focus-visible + .control-mark {
   outline: 3px solid #83B3D3;
+}
+
+.control:active .control-input[type="checkbox"] + .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .range-toggle:focus-visible {
@@ -1399,6 +1756,82 @@ html {
   box-shadow: inset 0 0 0 2px rgba(51, 51, 51, 1);
   outline: none;
   opacity: 30%;
+}
+
+.favorite-hostel-link:hover {
+  opacity: 60%;
+}
+
+.favorite-hostel-link:focus-visible {
+  box-shadow: inset 0 0 0 2px #83b3d3;
+  outline: none;
+}
+
+.favorite-hostel-link:active {
+  opacity: 30%;
+}
+
+.button-delete:hover svg {
+  fill: rgb(0, 0, 0);
+}
+
+.button-delete:focus-visible {
+  box-shadow: inset 0 0 0 2px #83b3d3;
+  outline: none;
+}
+
+.button-delete:focus-visible svg {
+  fill: rgb(0, 0, 0);
+}
+
+.button-delete:active svg {
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.modal-close-button:hover, .modal-field:hover {
+  background-color: rgba(229, 229, 229, 1)
+}
+
+.modal-close-button:focus-visible, .modal-field:focus-visible {
+  background-color: rgba(229, 229, 229, 1);
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.modal-field:active {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 2px #000000;
+}
+
+.modal-close-button:active {
+  background-color: rgba(229, 229, 229, 1);
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.sign:hover svg {
+  opacity: 1;
+}
+
+.sign:focus-visible svg {
+  opacity: 1;
+}
+
+.sign:focus-visible {
+  opacity: 1;
+  outline: none;
+  box-shadow: inset 0 0 0 3px #83b3d3;
+}
+
+.sign:active svg{
+  opacity: 20%;
+}
+
+.modal-info:hover {
+  background-color: rgba(104, 162, 202, 1);
+}
+
+.modal-info:hover .info-text{
+  display: block;
 }
 
 
