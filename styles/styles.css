@@ -112,7 +112,7 @@ html {
   width: calc(100% / 2 - 138px);
 }
 
-.navigation-user .navigation-link {
+.navigation-user .navigation-link, .button-favourites {
   min-width: 20px;
   min-height: 20px;
   padding: 10px;
@@ -132,13 +132,11 @@ html {
 
 
 .nav-search-link {
-  box-sizing: border-box;
   width: 160px;
   border-radius: 10px;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .navigation-icon {
@@ -148,6 +146,12 @@ html {
   bottom: 0;
   left: 0;
   margin: auto;
+}
+
+.button-favourites {
+  box-sizing: content-box;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 /**/
@@ -473,7 +477,7 @@ html {
   cursor: pointer;
 }
 
-.modal-info svg{
+.modal-info svg {
   position: absolute;
   top: 0;
   right: 0;
@@ -579,12 +583,15 @@ html {
 
 .advice-item,
 .advantages-item:nth-last-child(-n+3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 400px;
   text-align: center;
 }
 
-.advantages-item:nth-child(1),
-.advantages-item:nth-child(3) {
+.advantages-wrap,
+.advantages-item:nth-child(2) {
   display: flex;
   width: 1200px;
   color: #FFFFFF;
@@ -645,15 +652,53 @@ html {
 }
 
 .advice-icon-home {
+  display: block;
+  background-image: url("../images/home.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 75px;
+  height: 72px;
   margin-top: 89px;
 }
 
 .advice-icon-food {
+  display: block;
+  width: 74px;
+  height: 70px;
+  background-image: url("../images/food.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   margin-top: 91px;
 }
 
 .advice-icon-souvenirs {
+  display: block;
+  width: 64px;
+  height: 76px;
+  background-image: url("../images/souvenirs.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   margin-top: 85px;
+}
+
+.advantages-first-image {
+  display: block;
+  width: 800px;
+  height: 384px;
+  background-image: url("../images/advantages-photo-1.jpg");
+  background-repeat: no-repeat;
+}
+
+.advantages-second-image {
+  display: block;
+  width: 800px;
+  height: 384px;
+  background-image: url("../images/advantages-photo-2.jpg");
+  background-repeat: no-repeat;
+}
+
+.advantages-item-text {
+  width: 400px;
 }
 
 .advice-title {
@@ -724,7 +769,8 @@ html {
   margin-bottom: 50px;
 }
 
-.newsletter-form {
+
+.newsletter-label {
   display: grid;
   grid-template-columns: 1fr auto;
   width: 100%;
@@ -1822,7 +1868,7 @@ html {
   box-shadow: inset 0 0 0 3px #83b3d3;
 }
 
-.sign:active svg{
+.sign:active svg {
   opacity: 20%;
 }
 
@@ -1830,7 +1876,7 @@ html {
   background-color: rgba(104, 162, 202, 1);
 }
 
-.modal-info:hover .info-text{
+.modal-info:hover .info-text {
   display: block;
 }
 
