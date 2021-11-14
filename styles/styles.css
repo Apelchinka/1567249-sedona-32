@@ -16,17 +16,15 @@
 
 body {
   display: flex;
-  width: 1200px;
-  flex-direction: column;
+  min-width: 1280px;
   min-height: 100%;
-  margin: 0 auto;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #E5E5E5;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 button {
@@ -39,6 +37,26 @@ html {
   height: 100%;
 }
 
+/*page*/
+
+.main-container {
+  flex-grow: 1;
+}
+
+.main-inner {
+  flex-grow: 1;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/**/
 
 .visually-hidden {
   position: absolute;
@@ -292,6 +310,7 @@ html {
 }
 
 .button-all-favourites {
+  width: 100%;
   font-weight: 700;
   font-size: 16px;
   height: 60px;
@@ -377,11 +396,23 @@ html {
   background-position: center right 19px;
 }
 
-.booking-form label {
+.booking-arrival, .booking-departure,  .adults-wrap, .kids-wrap{
   display: flex;
   position: relative;
   justify-content: space-between;
   align-items: center;
+}
+
+.adults-wrap {
+  width: 288px;
+}
+
+.kids-wrap {
+  width: 230px;
+}
+
+.input-kids-wrap, .input-adults-wrap {
+  position: relative;
 }
 
 .booking-arrival::after {
@@ -409,20 +440,9 @@ html {
 .number-of-persons {
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
 }
 
-.label-adults {
-  width: 288px;
-}
-
-.label-kids {
-  width: 230px;
-}
-
-.label-adults, .label-kids {
-  position: relative;
-}
 
 .sign {
   box-sizing: content-box;
@@ -536,24 +556,8 @@ html {
 
 /**/
 
-/*page*/
-
-.main-container {
-  flex-grow: 1;
-}
-
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: #FFFFFF;
-}
-
-/**/
 
 /*welcome*/
-.about-sedona {
-  background-color: #FFFFFF;
-}
 
 .logo-welcome {
   height: 485px;
@@ -627,9 +631,6 @@ html {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advice-item:nth-child(even) {
-  background-color: #FFFFFF;
-}
 
 .advantages-item:nth-child(4) {
   background-color: rgba(131, 179, 211, 0.2);
@@ -739,9 +740,9 @@ html {
 /**/
 
 /*hotel search*/
+
 .hotel-search {
   display: flex;
-  background-color: #FFFFFF;
 }
 
 .hotel-search-wrapper {
@@ -776,9 +777,6 @@ html {
 /**/
 
 /*newsletter*/
-.newsletter {
-  background-color: #FFFFFF;
-}
 
 .newsletter-index {
   background-image: url("../images/background-newsletter.jpg");
@@ -802,13 +800,10 @@ html {
   margin-bottom: 50px;
 }
 
-
-.newsletter-label {
+.newsletter-form {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto  1fr auto;
   width: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
 }
 
 .input-newsletter {
@@ -844,9 +839,6 @@ html {
 
 /*footer*/
 
-.page-footer {
-  background-color: #FFFFFF;
-}
 
 .page-footer-container {
   display: flex;
